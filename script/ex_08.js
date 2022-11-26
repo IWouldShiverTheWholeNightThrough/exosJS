@@ -62,21 +62,23 @@ function parseInput() {
 
         switch (operateur) {
           case "+":
-            x = "" + (a + b);
+            x = a + b;
             break;
           case "-":
-            x = "" + (a - b);
+            x = a - b;
             break;
           case "x":
-            x = "" + a * b;
+            x = a * b;
             break;
           case "/":
-            x = "" + a / b;
+            x = a / b;
             break;
           case "%":
-            x = "" + (a % b);
+            x = a % b;
             break;
         }
+
+        x = "" + parseInt(1000*x)/1000; // on arrondit 3 chiffres apres la virgule
 
         y = "";
         operateur = input[i];
